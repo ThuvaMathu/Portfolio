@@ -8,7 +8,7 @@ export default function Home() {
     dots: false,
     infinite: false,
     autoplay: true,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1
   };
