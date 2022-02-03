@@ -1,9 +1,12 @@
 import React from 'react';
 import { Image } from 'react-bootstrap';
+import {useNav} from '../components/navbar/customHooks/useNav'
+import '../pages/page.css'
+export default function About() {
+  const aboutRef = useNav('About');
 
-export default function Features() {
-  return (
-    <div>
+	return (
+		<section ref={aboutRef} id='aboutContainer'>
       <div style={{display:'flex',justifyContent:'center'}}>
 <h4 className='font-weight-bold bd-highlight text-uppercase'>About Us</h4>
 
@@ -22,7 +25,7 @@ A responsive navigation header, including support for branding, navigation, and 
         </div>
       </div>
     </div>
-    </div>
+    </section>
     
   );
 }
