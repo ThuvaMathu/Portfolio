@@ -1,8 +1,12 @@
 import React from 'react';
+import {useNav} from '../components/navbar/customHooks/useNav'
+import '../pages/page.css'
 
-export default function Price() {
-  return (
-    <div>
+export default function Contact() {
+  const contactRef = useNav('Contact');
+
+	return (
+		<section ref={contactRef} id='contactContainer'>
     <div style={{display:'flex',justifyContent:'center'}}>
 <h4 className='font-weight-bold bd-highlight text-uppercase'>About Us</h4>
 
@@ -16,7 +20,7 @@ A responsive navigation header, including support for branding, navigation, and 
      
     </div>
   </div>
-  </div>
+  </section>
     
   );
 }
