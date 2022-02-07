@@ -1,10 +1,11 @@
 import React from 'react';
-import { Image } from 'react-bootstrap';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
 import {useNav} from '../components/navbar/customHooks/useNav'
 import '../pages/page.css'
+import 'bootstrap/dist/css/bootstrap.css';
+import {Container,Row,Col, Image} from 'react-bootstrap';
+
+
+
 export default function Home() {
   const settings = {
     dots: false,
@@ -17,13 +18,31 @@ export default function Home() {
   const homeRef = useNav('Home');
   return (
     <section ref={homeRef} id='homeContainer'>
-    <Slider{...settings}>
-
-    <Image src={require("../assets/image4.jpg")} style={{ width: '100%',  }}></Image>
-    <Image src={require("../assets/image5.png")} style={{ width: '100%',  }}></Image>
-    <Image src={require("../assets/image4.jpg")} style={{ width: '100%',}}></Image>
-    </Slider>
-
+      <div>
+        <Container className='home-container' >
+          <Row>
+            <Col sm={6} className='title-container'>
+              <div >
+                <h3 className='title-head1' id="Heading3">Hi, My name is</h3>
+              </div>
+              <div >
+                <h1 className='title-head' id="Heading4">Belldanti</h1>
+              </div>
+              <div>
+                <span>
+                  <h2 className='title-dis'>UI/UX Developer</h2>
+                </span>
+              </div>
+            </Col>
+            <Col sm={6} className='content-allign'>
+            
+            <Image className='newimage' src={require("../assets/sample.jpg")} ></Image>
+            
+            </Col>
+        </Row>
+        
+      </Container>
+      </div>
     </section>
     
   );

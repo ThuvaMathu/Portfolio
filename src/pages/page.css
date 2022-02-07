@@ -1,4 +1,4 @@
-section {
+/* section {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -9,9 +9,9 @@ section {
 
 section:nth-child(even) {
 	flex-direction: row-reverse;
-}
+} 
 
-section img,
+/* section img,
 section div {
 	height: auto;
 	width: 100%;
@@ -27,17 +27,134 @@ section div {
 	align-items: center;
 	justify-content: flex-start;
 	padding: 1em;
+} */
+.about-section{
+	margin-top: 5%;
+}
+.newimage {
+	
+	height: 600px;
+	padding-left: 10%;
+	animation-name: ex1;
+	animation-duration: 10s;
+}
+@keyframes ex1 {
+	0%   {margin-right: 0%; margin-top: 0%;}
+	100% {margin-left: 0%; margin-top: 0%;}
+}
+.home-container{
+	margin-top: 6%;
+	justify-content: center;
+	align-items: center;
+	
+	width: 100%;
+}
+.title-container{
+	margin-top: 10%;
+	align-content: center;
+	animation-name: ex;
+	animation-duration: 10s;
+
+}
+.image-container{
+	display: flex;
+	padding: 5%;
+	justify-content: center;
+	height: 100vh;
 }
 
-@media screen and (max-width: 900px) {
-	section,
-	section:nth-child(even) {
-		flex-direction: column;
-	}
+/* card container*/
+div::-webkit-scrollbar{
+	display: none;
+}
+div {
+	-ms-overflow-style: none; /* for Internet Explorer, Edge */
+	scrollbar-width: none; /* for Firefox */
+	overflow-y: scroll; 
+  }
+.about-Container{
+	width: auto;
+	padding:5% 10% 5% 10%;
+	background-color:rgba(0, 0, 0, 0.5);
 
+	border-radius:20px 20px 20px 20px;
+		
+}
+.card{
+	height: 30rem;
+	border-radius:20px 20px 20px 20px;
+	font-family:Times New Roman, Times, serif;
+	font-weight:400;
+	text-align:left;
+	white-space:normal;
+	color: aliceblue;
+	background-color: rgb(36, 35, 35);
+	overflow: hidden;
+}
+
+.card:hover{
+	box-shadow:0px 0px 10px 2px rgb(126, 125, 125);
+}
+.card-body{
+	overflow: auto;
+}
+ .gpd-header{
+	 text-align: center;
+	 color: aliceblue;
+ } 
+.image-prop{
+	opacity:10% ;
+	max-width: 100%;
+	height: auto;
+	
+	
+}
+.col{
+	min-width: 200px;
+}
+@keyframes ex {
+	
+		0%   {color: rgb(255, 0, 0);}
+		25% {color: rgb(255, 217, 2);}
+		50% {color: rgb(32, 255, 2);}
+		75% {color: rgb(0, 60, 255);}
+		100% {color: rgb(3, 3, 3);}
+	  }
+.title-head{
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size: 4vw;
+}
+.title-head1{
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 2vw;
+}
+.title-dis{
+	
+	padding-left: 10%;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size: 5vw;
+}
+.content-allign{
+	justify-content: center;
+}
+@media screen and (max-width: 900px) {
+	
 	section img {
 		height: auto;
 		width: auto;
 		max-width: 100vw;
 	}
+	.newimage {
+		height: auto;
+		padding-left: 30%;
+	}
+	.home-container{
+		margin-top: 20%;
+	}
+	.title-container{
+		position: absolute;
+		margin-top: 25%;
+		align-content: center;
+	}
 }
+
